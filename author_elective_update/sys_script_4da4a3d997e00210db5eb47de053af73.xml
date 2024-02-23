@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_58872_needit_needit</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Email Address Syntax Validate</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Pass the Requested for email to the Script Include.  Store the return
+  // value from the Script Include in the isEmail variable
+  var isEmail = validateEmailAddress(current.u_requested_for_email);
+  // If isEmail is false (email address syntax is not valid) do not save
+  // the record.  Write an error message to the screen.
+  if(isEmail == false){
+    gs.addErrorMessage(current.u_requested_for_email + " is not a valid email address.  You must provide a valid email address.");
+    current.setAbortAction(true);
+  }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-23 14:50:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4da4a3d997e00210db5eb47de053af73</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Email Address Syntax Validate</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_4da4a3d997e00210db5eb47de053af73</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-23 14:51:43</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=4da4a3d997e00210db5eb47de053af73"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>45505d7cdb7af1d002d91729139619f5</instance_id>
+        <instance_name>dev225963</instance_name>
+        <name>sys_script_4da4a3d997e00210db5eb47de053af73</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_58872_needit_needit&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Email Address Syntax Validate&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Pass the Requested for email to the Script Include.  Store the return
+  // value from the Script Include in the isEmail variable
+  var isEmail = validateEmailAddress(current.u_requested_for_email);
+  // If isEmail is false (email address syntax is not valid) do not save
+  // the record.  Write an error message to the screen.
+  if(isEmail == false){
+    gs.addErrorMessage(current.u_requested_for_email + " is not a valid email address.  You must provide a valid email address.");
+    current.setAbortAction(true);
+  }
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-02-23 14:50:53&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;4da4a3d997e00210db5eb47de053af73&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Email Address Syntax Validate&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_4da4a3d997e00210db5eb47de053af73&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-02-23 14:51:43&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;before&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=4da4a3d997e00210db5eb47de053af73"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1348019834</payload_hash>
+        <record_name>Email Address Syntax Validate</record_name>
+        <reverted_from/>
+        <source>98061f0897600210db5eb47de053afe0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-23 14:51:44</sys_created_on>
+        <sys_id>88f427d997e00210db5eb47de053af49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18dd67368760000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-23 14:51:44</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>ccf427d9b6e002104e0025e0e71ca848</update_guid>
+        <update_guid_history>ccf427d9b6e002104e0025e0e71ca848:-1348019834,84c463d5fce00210923b490a1683a38c:1642908512</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-23 14:57:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>19dd975dd044445f9655b3e2675ab071</sys_id>
+        <sys_metadata>4da4a3d997e00210db5eb47de053af73</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Email Address Syntax Validate</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent display_value="NeedIt">8dfb205897a40210db5eb47de053afdf</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_script_4da4a3d997e00210db5eb47de053af73</sys_update_name>
+        <sys_update_version display_value="sys_script_4da4a3d997e00210db5eb47de053af73">88f427d997e00210db5eb47de053af49</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-23 14:57:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
